@@ -75,10 +75,12 @@ const ServiceTable = ({ key, item, onEditOpen, onDeleteOpen }) => {
           style={{
             flex: 3,
             color: status === "Complete" ? "green" : "red",
-            border: "1px solid black",
+            // border: "1px solid black",
             padding: 1,
             borderRadius: 4,
-            borderColor: status === "Complete" ? "green" : "red",
+            background: status === "Complete" ? "green" : "red",
+            height: 20,
+            width: 50,
           }}
         >
           {status}

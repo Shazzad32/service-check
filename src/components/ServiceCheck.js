@@ -71,7 +71,7 @@ const ServiceCheck = () => {
 
   const updateUser = (user) => {
     axios
-      .put("http://localhost:3001/user/" + user._id, user)
+      .put("http://localhost:3001/users/" + user._id, user)
       .then((x) => {
         let datas = [...state.datas].map((x) =>
           x._id === user._id ? user : x
@@ -229,8 +229,8 @@ const ServiceCheck = () => {
           handelClose={handelClose}
           selectUser={state.selectUser}
           saveUser={saveUser}
+          onEditOpen={onEditOpen}
           updateUser={updateUser}
-          // onEditOpen={onEditOpen}
         />
       )}
       {/* {state.editOpen && (
