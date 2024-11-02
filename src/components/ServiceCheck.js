@@ -158,7 +158,7 @@ const ServiceCheck = () => {
           {" "}
           <Link
             to="/"
-            className="h-[60%] ml-4 w-[60px] text-white bg-gray-700 shadow-xl mr-4 flex items-center justify-center rounded-md cursor-pointer text-lg"
+            className="h-[40px] ml-4 w-[60px] text-white bg-gray-700 shadow-xl mr-4 flex items-center justify-center rounded-md cursor-pointer text-lg"
           >
             <PiArrowFatLinesLeftFill />
           </Link>
@@ -168,7 +168,7 @@ const ServiceCheck = () => {
         </div>
         <div className="h-full w-[30%] flex items-center justify-center">
           <button
-            className="h-[60%] w-[60px] text-white bg-gray-700 shadow-xl mr-4 flex items-center justify-center rounded-md cursor-pointer text-lg"
+            className="h-[40px] w-[60px] text-white bg-gray-700 shadow-xl mr-4 flex items-center justify-center rounded-md cursor-pointer text-lg"
             onClick={modalOpen}
           >
             +
@@ -176,7 +176,7 @@ const ServiceCheck = () => {
           <input
             type="search"
             id="search"
-            className="bg-gray-50 border w-[250px] border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block mr-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 h-[60%]"
+            className="bg-gray-50 border w-[250px] border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block mr-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Search..."
             value={state.searchItem}
             onChange={searchText}
