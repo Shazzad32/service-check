@@ -26,7 +26,7 @@ const ServiceCheck = () => {
   }, []);
 
   const getData = () => {
-    axios.get("http://localhost:3001/users").then((res) => {
+    axios.get("http://103.129.238.8:3001/users").then((res) => {
       let data = res.data.users;
       let old = { ...state };
       old.datas = data;
@@ -38,7 +38,7 @@ const ServiceCheck = () => {
 
   const saveUser = (user) => {
     axios
-      .post("http://localhost:3001/users", user)
+      .post("http://103.129.238.8:3001/users", user)
       .then((x) => {
         let old = { ...state };
         old.open = false;
@@ -54,7 +54,7 @@ const ServiceCheck = () => {
   const deleteUser = () => {
     if (state.selectUser) {
       axios
-        .delete("http://localhost:3001/users/" + state.selectUser._id)
+        .delete("http://103.129.238.8:3001/users/" + state.selectUser._id)
         .then((response) => {
           let old = { ...state };
           old.datas = old.datas.filter((x) => x._id !== state.selectUser._id);
@@ -71,7 +71,7 @@ const ServiceCheck = () => {
 
   const updateUser = (user) => {
     axios
-      .put("http://localhost:3001/users/" + user._id, user)
+      .put("http://192.168.0.162:3001/users/" + user._id, user)
       .then((x) => {
         let datas = [...state.datas].map((x) =>
           x._id === user._id ? user : x

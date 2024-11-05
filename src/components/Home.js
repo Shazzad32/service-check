@@ -27,7 +27,7 @@ const Home = () => {
 
   const getData = () => {
     axios
-      .get("http://localhost:3001/numbers")
+      .get("http://103.129.238.8:3001/numbers")
       .then((res) => {
         let data = res.data.numbers.map((item) => {
           return {
@@ -48,7 +48,7 @@ const Home = () => {
 
   const saveData = (info) => {
     axios
-      .post("http://localhost:3001/numbers", info)
+      .post("http://103.129.238.8:3001/numbers", info)
       .then((x) => {
         let old = { ...state };
         old.open = false;
@@ -63,7 +63,7 @@ const Home = () => {
   const deleteNumber = () => {
     if (state.selectNumber) {
       axios
-        .delete("http://localhost:3001/numbers/" + state.selectNumber._id)
+        .delete("http://103.129.238.8:3001/numbers/" + state.selectNumber._id)
         .then((response) => {
           let old = { ...state };
           old.datas = old.datas.filter((x) => x._id !== state.selectNumber._id);
@@ -80,7 +80,7 @@ const Home = () => {
 
   const updateNumber = (number) => {
     axios
-      .put("http://localhost:3001/numbers/" + number._id, number)
+      .put("http://103.129.238.8:3001/numbers/" + number._id, number)
       .then((x) => {
         let datas = [...state.datas].map((x) =>
           x._id === number._id ? number : x
